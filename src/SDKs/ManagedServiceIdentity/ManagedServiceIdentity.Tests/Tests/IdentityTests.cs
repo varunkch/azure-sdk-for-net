@@ -6,7 +6,6 @@ using Microsoft.Rest.ClientRuntime.Azure.TestFramework;
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -14,7 +13,6 @@ namespace ManagedServiceIdentity.Tests.Tests
 {
     public class IdentityTests : IDisposable
     {
-        private static HttpClientHandler Handler = null;
         private string ResourceGroupName = "SDKTest";
         private string ExplicitIdentityType = "Microsoft.ManagedIdentity/userAssignedIdentities";
         private string CanaryCentralRegion = "centraluseuap";
