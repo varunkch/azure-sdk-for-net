@@ -98,8 +98,6 @@ namespace ManagedServiceIdentity.Tests.Tests
             }
         }
 
-        // Comment out when ARM Manifest is deployed.
-        /*
         [Fact]
         public async Task TestOperationsApi()
         {
@@ -109,9 +107,10 @@ namespace ManagedServiceIdentity.Tests.Tests
                 var msiMgmtClient = context.GetServiceClient<ManagedServiceIdentityClient>(handlers: handler);
                 var operationsResult = await msiMgmtClient.Operations.ListWithHttpMessagesAsync();
                 Assert.Equal(HttpStatusCode.OK, operationsResult.Response.StatusCode);
+                Assert.NotNull(operationsResult.Body);
             }
         }
-        */
+
         private void VerifyIdentityCollection(IPage<Identity> identities, string[] identityNames)
         {
             int identityCount = 0;
