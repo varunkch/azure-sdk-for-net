@@ -33,7 +33,7 @@ namespace ManagedServiceIdentity.Tests.Tests
         }
 
         [Fact]
-        public async Task IdentityCRUDTest()
+        public async Task TestIdentityCRUD()
         {
             var handler = new RecordedDelegatingHandler { IsPassThrough = true };
             using (MockContext context = MockContext.Start(this.GetType().FullName))
