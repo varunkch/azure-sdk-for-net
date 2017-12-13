@@ -286,7 +286,7 @@ namespace Microsoft.Azure.Management.ManagedServiceIdentity
         {
             Operations = new Operations(this);
             UserAssignedIdentities = new UserAssignedIdentitiesOperations(this);
-            BaseUri = new System.Uri("https://centraluseuap.management.azure.com");
+            BaseUri = new System.Uri("https://management.azure.com");
             ApiVersion = "2015-08-31-preview";
             AcceptLanguage = "en-US";
             LongRunningOperationRetryTimeout = 30;
